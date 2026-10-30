@@ -1,12 +1,11 @@
 # Learning Emotion-Aligned Representations from Audio and Lyrics
-
-This project tests whether aligning audio and lyrics embeddings with a contrastive loss improves music emotion recognition on the MERGE Bimodal dataset.
+Music emotion is expressed through both audio and lyrics. This project investigates whether contrastive audio–lyrics alignment improves music emotion recognition. Using the MERGE Bimodal dataset, it compares unimodal and multimodal models, with and without symmetric contrastive alignment, in terms of emotion prediction and cross-modal retrieval.
 
 ## Files
 - **Report:** [`report.pdf`](report.pdf)
 - **Main notebook:** [`notebooks/merge-project.ipynb`](notebooks/merge-project.ipynb) (committed run, all outputs saved)
 - **QP@10 check:** [`notebooks/qp10_true_pair_excluded.ipynb`](notebooks/qp10_true_pair_excluded.ipynb)
-- **Experimental configuration:** [`experiments.txt`](experiments.txt)
+- **Experimental configuration:** [`experiment_config.txt`](experiment_config.txt)
 
 ## Method in brief
 - Frozen backbones: **MERT-v1-95M** (audio) and **RoBERTa-base** (lyrics); all 13 hidden states cached in fp16.
