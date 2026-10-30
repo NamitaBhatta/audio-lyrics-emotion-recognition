@@ -6,7 +6,7 @@ This project tests whether aligning audio and lyrics embeddings with a contrasti
 - **Report:** [`report.pdf`](report.pdf)
 - **Main notebook:** [`notebooks/merge-project.ipynb`](notebooks/merge-project.ipynb) (committed run, all outputs saved)
 - **QP@10 check:** [`notebooks/qp10_true_pair_excluded.ipynb`](notebooks/qp10_true_pair_excluded.ipynb)
-- **Experimental configuration:** [`configs/experiments.yaml`](configs/experiments.yaml)
+- **Experimental configuration:** [`configs/experiments.yaml`](experiments.txt)
 
 ## Method in brief
 - Frozen backbones: **MERT-v1-95M** (audio) and **RoBERTa-base** (lyrics); all 13 hidden states cached in fp16.
