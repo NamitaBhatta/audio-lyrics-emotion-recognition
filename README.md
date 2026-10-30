@@ -2,7 +2,7 @@
 Music emotion is expressed through both audio and lyrics. This project investigates whether contrastive audio–lyrics alignment improves music emotion recognition. Using the MERGE Bimodal dataset, it compares unimodal and multimodal models, with and without symmetric contrastive alignment, in terms of emotion prediction and cross-modal retrieval.
 
 ## Files
-- **Report:** [`report.pdf`](report.pdf)
+- **Report:** [`Report.pdf`](Report.pdf)
 - **Main notebook:** [`notebooks/merge-project.ipynb`](notebooks/merge-project.ipynb) (committed run, all outputs saved)
 - **QP@10 check:** [`notebooks/qp10_true_pair_excluded.ipynb`](notebooks/qp10_true_pair_excluded.ipynb)
 - **Experimental configuration:** [`experiment_config.txt`](experiment_config.txt)
