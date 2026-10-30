@@ -1,0 +1,39 @@
+EXPERIMENTAL CONFIGURATION
+(settings used for all results in report.pdf)
+
+DATA
+  Dataset : MERGE Bimodal Complete
+  Split   : official 70/15/15 (1552 train / 332 val / 332 test)
+
+BACKBONES (frozen)
+  Audio  : MERT-v1-95M
+  Lyrics : RoBERTa-base
+
+MODEL
+  Hidden size      : 256
+  Encoder layers   : 2 per modality
+  Fusion layers    : 2
+  Attention heads  : 4
+
+TRAINING
+  Optimizer        : AdamW, weight decay 0.01
+  Batch size       : 64
+  Max epochs       : 60 (early stopping, patience 10, on validation macro-F1)
+  LR schedule      : 5% warm-up + cosine decay
+  Gradient clip    : 1.0
+  Tuning seeds     : 101, 102, 103
+  Final seeds      : 0, 1, 2, 3, 4
+
+SELECTED SETTINGS
+  E1 audio only            : lr 1e-4, dropout 0.1
+  E2 lyrics only           : lr 1e-4, dropout 0.3
+  E3 multimodal            : lr 1e-4, lambda_uni 1, lambda_align 0
+  E4 multimodal + align    : lr 1e-4, lambda_uni 1, lambda_align 0.05, tau 0.1
+
+SEARCH GRIDS
+  E1, E2 : lr {1e-4, 3e-4} x dropout {0.1, 0.3}
+  E3     : lambda_uni {0, 0.5, 1}
+  E4     : lambda_align {0.05, 0.1, 0.5, 1} x tau {0.05, 0.1, 0.2}
+
+LAMBDA_ALIGN SWEEP
+  lambda_align {0, 0.05, 0.1, 0.5, 1, 2}, tau 0.1, lambda_uni 1, 5 seeds each
