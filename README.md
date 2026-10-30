@@ -3,7 +3,7 @@ Music emotion is expressed through both audio and lyrics. This project investiga
 
 ## Files
 - **Report:** [`Report.pdf`](Report.pdf)
-- **Main notebook:** [`notebooks/merge-project.ipynb`](notebooks/merge-project.ipynb) (committed run, all outputs saved)
+- **Main notebook:** [`notebooks/merge_project.ipynb`](notebooks/merge_project.ipynb) (committed run, all outputs saved)
 - **QP@10 check:** [`notebooks/qp10_true_pair_excluded.ipynb`](notebooks/qp10_true_pair_excluded.ipynb)
 - **Experimental configuration:** [`experiment_config.txt`](experiment_config.txt)
 
